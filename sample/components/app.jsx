@@ -2,7 +2,6 @@ import React from 'react';
 import Dashboard, { addWidget } from '../../lib';
 
 // App Components
-import Header from './Header';
 import EditBar from './EditBar';
 import Container from './Container';
 
@@ -94,7 +93,6 @@ class App extends React.Component {
     /* eslint max-len: "off" */
     return (
       <Container>
-        <Header />
         <EditBar onEdit={this.toggleEdit} />
         <Dashboard
           onRemove={this.onRemove}

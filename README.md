@@ -1,11 +1,12 @@
 # React Rubick
 React Rubick is a library based on [React Dazzle](https://github.com/Raathigesh/dazzle) for building dashboards with React.
+In React Rubick you can set indvidually title and props of component for each widget.
 
 ## Installation
 ```bash
-npm install react-rubick --save
-# or
 yarn add react-rubick
+# or
+npm install react-rubick --save
 ```
 
 ## Usage
@@ -13,11 +14,11 @@ yarn add react-rubick
 import React, { Component } from 'react';
 import Dashboard from 'react-rubick';
 
-// Your widget. Just another react component.
-import CounterWidget from './widgets/CounterWidget';
-
-// Default style.
+// Default style
 import 'react-rubick/lib/style/style.css';
+
+// Your widget
+import CounterWidget from './widgets/CounterWidget';
 
 class App extends Component {
   constructor() {
@@ -36,7 +37,7 @@ class App extends Component {
               key: 'WordCounter',
               title: 'Word Counter Report',
               props: {
-                a: 'a',
+                Test: 1,
               },
             }],
           }],
@@ -46,9 +47,10 @@ class App extends Component {
   }
 
   render() {
-    return <Dashboard  widgets={this.state.widgets} layout={this.state.layout}  />
+    return <Dashboard widgets={this.state.widgets} layout={this.state.layout} />
   }
 }
 ```
 
-# [Documentation](https://github.com/EmanuelJr/react-rubick/blob/master/docs/README.md)
+## Documentation
+You can find the documentation [here](https://github.com/EmanuelJr/react-rubick/blob/master/docs/README.md).

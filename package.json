@@ -1,7 +1,7 @@
 {
   "name": "react-rubick",
-  "version": "1.0.0",
-  "description": "The simple yet flexible dashbording solution for React",
+  "version": "1.0.1",
+  "description": "Dashboard components made in React",
   "license": "MIT",
   "main": "dist/lib.js",
   "style": "lib/style/style.css",
