@@ -10,6 +10,7 @@ const AddWidgetDialog = ({ widgets, isModalOpen, onRequestClose, onWidgetSelect 
       </a>
     </div>
   ));
+
   return (
     <Modal
       className="Modal__Bootstrap modal-dialog"

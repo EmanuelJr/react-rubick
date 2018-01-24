@@ -1,8 +1,11 @@
 import React from 'react';
-const HelloWorld = () => (
-  <div>
-    <img src="http://static.simpledesktops.com/uploads/desktops/2013/08/09/space-RGB-01.png.625x385_q100.png" width="325px" />
-  </div>
-);
+
+function HelloWorld() {
+  return (
+    <div>
+      <img src="https://d1u5p3l4wpay3k.cloudfront.net/dota2_gamepedia/8/8a/Rubick_icon.png" width="250px" />
+    </div>
+  );
+}
 
 export default HelloWorld;

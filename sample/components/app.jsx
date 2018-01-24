@@ -9,7 +9,6 @@ import Container from './Container';
 import HelloWorld from './widgets/HelloWorld';
 import AnotherWidget from './widgets/AnotherWidget';
 import AddWidgetDialog from './AddWidgetDialog';
- // import CustomAddWidgetButton from './CustomAddWidgetButton';
 
 import 'bootstrap/dist/css/bootstrap.css';
 import '../css/custom.css';
@@ -90,7 +89,6 @@ class App extends React.Component {
   }
 
   render() {
-    /* eslint max-len: "off" */
     return (
       <Container>
         <EditBar onEdit={this.toggleEdit} />
@@ -103,7 +101,12 @@ class App extends React.Component {
           onAdd={this.onAdd}
           onMove={this.onMove}
         />
-        <AddWidgetDialog widgets={this.state.widgets} isModalOpen={this.state.isModalOpen} onRequestClose={this.onRequestClose} onWidgetSelect={this.widgetSelected} />
+        <AddWidgetDialog
+          widgets={this.state.widgets}
+          isModalOpen={this.state.isModalOpen}
+          onRequestClose={this.onRequestClose}
+          onWidgetSelect={this.widgetSelected}
+        />
       </Container>
     );
   }
