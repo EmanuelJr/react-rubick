@@ -1,6 +1,6 @@
 # React Rubick
 React Rubick is a library based on [React Dazzle](https://github.com/Raathigesh/dazzle) for building dashboards with React.
-In React Rubick you can set indvidually title and props of component for each widget.
+In React Rubick you can set indvidually title and props of widget component.
 
 ## Installation
 ```bash

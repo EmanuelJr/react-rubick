@@ -3,19 +3,19 @@ A widget frame is an element which surrounds a widget. Widget frame contains the
 
 ![Widget Frame](./images/Frame.Png)
 
-Dazzle comes with a default frame built it. By default this frame will be used when displaying widgets in the dashboard. If you don't like the style of this frame or you need to implement some additional functionality into the frame, you could build your own fancy frame and ask Dazzle to use your frame instead of the default.
+React Rubick comes with a default frame component. By default this frame will be used when displaying widgets in the dashboard. If you don't like the style of this frame or you need to implement some additional functionality into the frame.
 
 ### Show me the code
 
 > Below example uses [React's state-less components](https://facebook.github.io/react/docs/reusable-components.html#stateless-functions).
 
 ```javascript
-const CustomFrame = ({title, editable, children, onRemove }) => {
+function CustomFrame({title, editable, children, onRemove }) {
   return (
       <div className="custom-frame-container">
         <div className="custom-frame-title">
             <h2>{title}</h2>
-            {editable &&<a onClick={() => {onRemove();}} >Remove</a>}
+            {editable && <a onClick={() => onRemove()}>Remove</a>}
         </div>
         <div className="custom-frame-content">
           {children}
@@ -34,17 +34,16 @@ A custom frame is just another React component. Custom frame will be provided wi
 | children | React element | Children of the frame. The widget that is going to be rendered. |
 | onRemove | function | The function that should be called when you want to remove the widget. |
 
-### How to let dazzle know about this?
-Well, it's extremely simple.
-
+### How to let React Rubick know about this?
 ```javascript
-import Dashboard from 'react-dazzle';
+import Dashboard from 'react-rubick';
 import CustomFrame from './CustomFrame';
 
-<Dashboard /* Other props goes here*/ frameComponent={CustomFrame}  />
+<Dashboard
+  // Other props
+  frameComponent={CustomFrame}
+/>
 ```
-
-Now all the widgets will use your fancy frame.
 
 #### More docs
 - [Readme](../README.md)
