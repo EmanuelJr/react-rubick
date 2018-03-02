@@ -16,7 +16,7 @@
 
 ### Providing `widgets`
 `widgets` prop of the dashboard component takes an object. A sample `widgets` object would look like below. This object holds all the widgets that could be used in the dashboard.
-All widget has a prop labeled as `layoutData` with row, column and widget index in layout.
+All widget has a prop labeled as `widgetData` with row, column and widget index in layout.
 
 ```javascript
 {
