@@ -34,7 +34,6 @@ module.exports = {
     filename: '[name].js',
     publicPath: '/',
     sourceMapFilename: '[name].js.map',
-    library: 'dazzle',
     libraryTarget: 'umd',
     umdNamedDefine: true,
   },
