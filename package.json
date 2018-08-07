@@ -1,7 +1,7 @@
 {
   "name": "react-rubick",
   "version": "1.2.4",
-  "description": "Dashboard components made in React",
+  "description": "Dashboard component made in React",
   "license": "MIT",
   "main": "dist/lib.js",
   "style": "lib/style/style.css",
@@ -11,14 +11,12 @@
     "clean": "rimraf dist coverage",
     "start": "cross-env NODE_ENV=production node server/node-server.js",
     "dev": "cross-env NODE_ENV=development webpack-dev-server -d --inline --hot --progress --no-info",
-    "lint": "npm run lint-js",
-    "lint-js": "eslint .",
+    "lint": "eslint .",
     "test": "babel-node ./node_modules/istanbul/lib/cli.js --include-all-sources cover node_modules/mocha/bin/_mocha -- --require ./test/entry.js ./test/**/*.spec.js",
     "test:watch": "babel-node ./node_modules/istanbul/lib/cli.js --include-all-sources cover node_modules/mocha/bin/_mocha -- --require ./test/entry.js ./test/**/*.spec.js --watch",
     "cover": "babel-node ./node_modules/istanbul/lib/cli.js --include-all-sources cover node_modules/mocha/bin/_mocha --  --require ./test/entry.js ./test/**/*.spec.js",
     "report-cover": "babel-node ./node_modules/istanbul/lib/cli.js --include-all-sources cover node_modules/mocha/bin/_mocha -- --require ./test/entry.js ./test/**/*.spec.js && codecov",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
-    "commit": "git-cz"
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "keywords": [
     "react",
@@ -85,8 +83,5 @@
   "peerDependencies": {
     "react": "^0.14.0 || ^15.0.0-0",
     "react-dom": "^15.5.4"
-  },
-  "czConfig": {
-    "path": "node_modules/cz-conventional-changelog"
   }
 }

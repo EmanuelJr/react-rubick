@@ -4,7 +4,7 @@ Using `addWidget` method from React Rubick you can pass widget component, title 
 
 When add widget is clicked, `onAdd` function will be called. The `onAdd` function will be provided with the current `layout`, index of the `row` and `column` where the new widget should be added.
 
-You could add a new widget to the dashboard by calling the method `addWidget` passing the parameters you received from the `onAdd` callback along with the key of the widget that should be added.
+You could add a new widget to the dashboard by calling the method `addWidget` passing the parameters you received from the `onAddWidget` callback along with the key of the widget that should be added.
 
 Below is a sample of adding a widget when `Add Widget` is clicked.
 
@@ -49,7 +49,7 @@ class App extends Component {
       <Dashboard
         widgets={this.state.widgets}
         layout={this.state.layout}
-        onAdd={() => this.onAdd()}
+        onAddWidget={() => this.onAdd()}
       />
     );
   }

@@ -46,10 +46,10 @@ The `layout` prop takes the current layout of the dashboard. Layout could have m
   rows: [{
     columns: [{
       className: 'col-md-6 col-sm-6 col-xs-12',
-      widgets: [{key: 'HelloWorldWidget'}]
+      widgets: [{ key: 'HelloWorldWidget' }]
     }, {
       className: 'col-md-6 col-sm-6 col-xs-12',
-      widgets: [{key: 'AnotherWidget'}]
+      widgets: [{ key: 'AnotherWidget' }]
     }]
   }]
 }
