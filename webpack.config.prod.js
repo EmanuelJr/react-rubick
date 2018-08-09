@@ -24,11 +24,6 @@ module.exports = {
   entry: {
     lib: ['./lib/index.js'],
   },
-
-  resolve: {
-    extensions: ['', '.js', '.jsx'],
-  },
-
   output: {
     path: path.join(__dirname, 'dist'),
     filename: '[name].js',
@@ -37,25 +32,25 @@ module.exports = {
     libraryTarget: 'umd',
     umdNamedDefine: true,
   },
-
+  module: {
+    preLoaders: [
+      { test: /\.(jsx?)$$/, loader: 'source-map-loader' },
+      { test: /\.(jsx?)$$/, loader: 'eslint-loader' },
+    ],
+    loaders: [
+      { test: /\.css$/, loader: 'style-loader!css-loader' },
+      { test: /\.(jsx?)$/, loaders: ['react-hot', 'babel'], exclude: /node_modules/ },
+    ],
+  },
+  plugins,
+  resolve: {
+    extensions: ['', '.js', '.jsx'],
+  },
   externals: {
     react: 'react',
     'react-dom': 'react-dom',
   },
-
   devtool: 'source-map',
-  plugins,
-
-  module: {
-    preLoaders: [
-      { test: /\.(js|jsx)$$/, loader: 'source-map-loader' },
-      { test: /\.(js|jsx)$$/, loader: 'eslint-loader' },
-    ],
-    loaders: [
-      { test: /\.css$/, loader: 'style-loader!css-loader' },
-      { test: /\.(js|jsx)$/, loaders: ['react-hot', 'babel'], exclude: /node_modules/ },
-    ],
-  },
   node: {
     global: false,
   },

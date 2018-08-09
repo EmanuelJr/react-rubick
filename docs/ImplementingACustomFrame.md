@@ -41,7 +41,7 @@ import CustomFrame from './CustomFrame';
 
 <Dashboard
   // Other props
-  frameComponent={CustomFrame}
+  widgetFrameComponent={CustomFrame}
 />
 ```
 
